@@ -70,8 +70,8 @@ namespace Base_Converter
         {
             if(baseNAme == "Binary") //Binary Converter
             {
-                string hex = Convert.ToInt32(baseValue, 2).ToString("X");
-                string dec = Convert.ToInt32(baseValue, 2).ToString("N0");
+                string hex = Convert.ToInt64(baseValue, 2).ToString("X");
+                string dec = Convert.ToInt64(baseValue, 2).ToString("N0");
                 DisplayBox1Header.Text = "Hexadecimal";
                 DisplayBox2Header.Text = "Decimal";
 
@@ -98,7 +98,7 @@ namespace Base_Converter
             }
             else //Hexadecimal Converter
             {
-                string dec = Convert.ToInt32(baseValue, 16).ToString("N0");
+                string dec = Convert.ToInt64(baseValue, 16).ToString("N0");
                 string bin = Convert.ToString(Convert.ToInt64(baseValue, 16), 2);
 
                 while (bin.Length % 4 != 0)
